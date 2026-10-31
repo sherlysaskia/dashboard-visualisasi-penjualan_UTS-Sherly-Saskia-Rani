@@ -3,6 +3,7 @@
 
 **Nama:** Sherly Saskia Rani  
 **NIM:** 241051002
+Link Demo: https://dashboard-uts-sherly.streamlit.app/ 
 
 ## Deskripsi Proyek
 
