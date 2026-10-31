@@ -307,32 +307,37 @@ rata_order = (
 )
 
 total_qty = data["quantityordered"].sum()
+jumlah_data = len(data)
 
-k1, k2, k3, k4 = st.columns(4)
+k1, k2, k3, k4, k5 = st.columns(5)
 
 k1.metric(
-    "Total penjualan",
+    "Total Penjualan",
     f"${total_sales / 1_000_000:,.2f}M",
     help=f"${total_sales:,.0f}"
 )
 
 k2.metric(
-    "Jumlah order",
+    "Jumlah Order",
     f"{jumlah_order:,}"
 )
 
 k3.metric(
-    "Rata-rata nilai per order",
+    "Rata-rata Nilai per Order",
     f"${rata_order:,.0f}"
 )
 
 k4.metric(
-    "Total unit terjual",
+    "Total Unit Terjual",
     f"{total_qty:,.0f}"
 )
 
-st.divider()
+k5.metric(
+    "Jumlah Data",
+    f"{jumlah_data:,}"
+)
 
+st.divider()
 
 # ---------- Baris 1: Tren dan lini produk ----------
 c1, c2 = st.columns([3, 2])
